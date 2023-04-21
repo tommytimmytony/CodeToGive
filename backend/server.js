@@ -1,14 +1,14 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const collection = require("./Schemas");
 const app = express();
+const PORT = process.env.PORT;
+const MONGO_URL = process.env.MONGO_URL;;
 
 mongoose
-  .connect(
-    "mongodb+srv://FirstDB:qTzAkdNBK2ETlbTS@database9.2w0rkph.mongodb.net/?retryWrites=true&w=majority",
-    { useNewUrlParser: true }
-  )
+  .connect(MONGO_URL, { useNewUrlParser: true })
   .then(() => console.log("Database connected"))
   .catch((err) => console.log(err));
 
@@ -41,7 +41,6 @@ app.post("/signup", async (req, res) => {
     password: password,
   };
 
-  
   try {
     const check = await collection.findOne({ username: username });
     if (check) {
@@ -55,4 +54,4 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.listen(4000, () => console.log(`Server listening on Port 4000`));
+app.listen(PORT, () => console.log(`Server listening on Port ${PORT}`));

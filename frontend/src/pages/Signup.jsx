@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+const PORT = 4000;
+
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -9,9 +11,10 @@ const Signup = () => {
 
   const submit = async (e) => {
     e.preventDefault();
+
     try {
       await axios
-        .post("http://localhost:4000/signup/", {
+        .post(`http://localhost:${PORT}/signup/`, {
           username,
           password,
         })
@@ -23,7 +26,7 @@ const Signup = () => {
           }
         })
         .catch((e) => {
-          alert("wrong details");
+          alert("wrong details or DB is not connect pleast check");
           console.log(e);
         });
     } catch {
@@ -31,31 +34,33 @@ const Signup = () => {
     }
   };
   return (
-    <div className="login">
-      <h1>Signup</h1>
-      <form>
-        <input
-          type="username"
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-          placeholder="Username"
-          name="username"
-        />
-        <input
-          type="password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          placeholder="Password"
-          name="password"
-        />
-        <input type="submit" onClick={submit} />
-      </form>
-      <br />
-      <p>OR</p>
-      <br />
-      <Link to="/">Login Page</Link>
+    <div className="login-container">
+      <div className="login">
+        <h1>Signup</h1>
+        <form>
+          <input
+            type="username"
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            type="password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            placeholder="Password"
+            name="password"
+          />
+          <input type="submit" onClick={submit} />
+        </form>
+        <br />
+        <p>OR</p>
+        <br />
+        <Link to="/">Login Page</Link>
+      </div>
     </div>
   );
 };
