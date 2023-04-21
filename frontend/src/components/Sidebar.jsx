@@ -1,5 +1,7 @@
 import React from "react";
-import {FaTh, FaUserAlt, FaBars, FaUser} from "react-icons/fa"
+import * as FaIcons from "react-icons/fa"
+import * as AiIcons from "react-icons/ai"
+import * as BiIcons from "react-icons/bi"
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css"
 import logo from "../assets/Make_A_Wish_logo.jpg"
@@ -9,12 +11,12 @@ const Sidebar = ({children}) => {
       {
         path: "/chatsapp",
         name: "ChatsApp",
-        icon: <FaUserAlt/>,
+        icon: <AiIcons.AiOutlineMessage />,
       },
       {
         path: "/remindertask",
         name: "ReminderTask",
-        icon: <FaBars/>,
+        icon: <BiIcons.BiTask/>,
       },
     ];
     return (

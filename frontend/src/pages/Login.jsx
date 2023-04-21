@@ -28,31 +28,33 @@ const Login = () => {
         navigate("/home", {state: {id:username}})
     }
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form action="POST">
-        <input
-          type="username"
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-          placeholder="Username"
-          name="username"
-        />
-        <input
-          type="password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          placeholder="Password"
-          name="password"
-        />
-        <input type="submit" onClick={submit} />
-      </form>
-      <br />
-      <p>OR</p>
-      <br />
-      <Link to="/signup">Signup Page</Link>
+    <div className="login-container">
+      <div className="login">
+        <h1>Login</h1>
+        <form action="POST">
+          <input
+            type="username"
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            type="password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            placeholder="Password"
+            name="password"
+          />
+          <input type="submit" onClick={submit} />
+        </form>
+        <br />
+        <p>OR</p>
+        <br />
+        <Link to="/signup">Signup Page</Link>
+      </div>
     </div>
   );
 };

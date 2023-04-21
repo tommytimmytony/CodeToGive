@@ -1,17 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  border-radius: 8px;
+  font-family: "Arial", "Poppins", "sans-serif";
 }
 
-.login {
+/* HomePage - Style */
+.App{
+  background-color: #67acfb92;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px
+  
+}
+
+.welcome-container {
+  padding-left: 30px;
+}
+
+
+/* Login/SignUp - Style  */
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 8px;
+  background-color: #8cb8ef;
+}
+
+.login {
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 8px;
+  background-color: #cadcf2;
 }
 
 h1 {
@@ -33,6 +64,7 @@ input[type="password"] {
   border: none;
   border-bottom: 2px solid #ccc;
   font-size: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: border-bottom-color 0.3s ease-in-out;
 }
 
@@ -44,13 +76,15 @@ input[type="password"]:focus {
 
 input[type="submit"] {
   margin-top: 1rem;
-  padding: 0.5rem;
+  padding: 0.75rem;
   background-color: #0077ff;
   color: white;
   border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  
 }
 
 input[type="submit"]:hover {

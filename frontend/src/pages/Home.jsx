@@ -19,9 +19,9 @@ const Home = () => {
   //     </div>
   // )
   return (
-    <div className="App">
-      <h1>Hello {location.state.id} and welcome to the Home</h1>
+    <div className="home-container">
       <Sidebar>
+        <h1 className="welcome-container">Hello {location.state.id} and welcome to the Home</h1>
         <Routes>
           <Route path="/chatsapp" element={<ChatsApp />} />
           <Route path="/remindertask" element={<ReminderTask />} />
