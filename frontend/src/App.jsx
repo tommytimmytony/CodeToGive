@@ -1,8 +1,10 @@
-import Home from "./components/Home"
-import Login from "./components/Login"
-import Signup from "./components/Signup"
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import { useState } from "react"
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import ChatsApp from "./pages/Chatsapp";
+import ReminderTask from "./pages/ReminderTask";
 
 const App = () => {
   return (
@@ -12,10 +14,12 @@ const App = () => {
           <Route path="/" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/home" element={<Home />}></Route>
+          <Route path="/chatsapp" element={<ChatsApp />} />
+          <Route path="/remindertask" element={<ReminderTask />} />
         </Routes>
       </Router>
     </div>
   );
-}
+};
 
-export default App
+export default App;
