@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import TaskList from './TaskList'
+import TaskList from "./TaskList";
 import tasks from "./tasks/tasks.json";
-import '../styles/ReminderTask.css';
+import "../styles/ReminderTask.css";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { BiCheck } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 const ReminderTask = () => {
     const [ taskList, setTaskList ] = useState(tasks);
@@ -38,7 +39,7 @@ const ReminderTask = () => {
     
        <div className="back-button" onClick={navigateToHome}><IoMdArrowRoundBack size={34}/></div>
              
-        <h1 id="header" > Upcoming Task Reminders </h1>
+        <h1 id="header" > Upcoming Tasks </h1>
             <div className="">
                 <TaskList taskList={taskList} toggleTaskCompletion={toggleTaskCompletion} />
             </div>

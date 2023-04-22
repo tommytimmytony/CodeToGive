@@ -9,11 +9,11 @@
 }, {
     "id": 3,
     "task": "Add account secondary",
-    "complete": true
+    "complete": false
 }, {
     "id": 4,
     "task": "Submit XYZ Form",
-    "complete": true
+    "complete": false
 }, {
     "id": 5,
     "task": "Opt-in/out of request to connect availability",

@@ -37,3 +37,10 @@
 .active:hover{
     background-color: rgb(214, 214, 214);
 }
+
+.back-button{
+    color: black;
+    background-color: inherit;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}

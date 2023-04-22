@@ -1,8 +1,8 @@
-/*
-div{
+.list{
     padding: .5vw 4vw;
+    max-height: 80%;
 }
 
-.list{
-    max-height: 80%;
-}*/
+h1{
+    font-family: 'Oxygen', sans-serif;
+}
