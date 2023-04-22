@@ -73,8 +73,9 @@ input[type="password"]:focus {
 }
 
 input[type="submit"] {
-  margin-top: 1rem;
-  padding: 0.75rem;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding: 0; 
   background-color: #0077ff;
   color: white;
   border: none;
@@ -82,11 +83,13 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  text-align: center;
 }
 
 input[type="submit"]:hover {
   background-color: #0053ba;
 }
+
 
 p {
   margin-top: 1rem;

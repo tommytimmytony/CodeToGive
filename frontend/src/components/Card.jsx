@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../assets/Make_A_Wish_logo.jpg";
-import "../styles/Card.css"
-const Card = ({name, wish, pic, guardian, contact}) => {
+import "../styles/Card.css";
+import { useWorks } from "./context/WorkContext";
+
+const Card = ({ name, wish, pic, guardian, contact }) => {
+  const { addNameToStack } = useWorks();
   return (
-    <div className="card-container" onClick={() =>{
-        console.log(name)
-    }}>
+    <div
+      className="card-container"
+      onClick={() => addNameToStack({ name: name })}
+    >
       <div className="image-container">
         <img src={pic} alt="" />
       </div>
@@ -21,6 +25,6 @@ const Card = ({name, wish, pic, guardian, contact}) => {
       </div>
     </div>
   );
-}
+};
 
 export default Card;
