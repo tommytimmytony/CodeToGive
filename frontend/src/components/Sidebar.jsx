@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import Card from "./Card";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -7,6 +7,7 @@ import * as MdIcons from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css";
 import logo from "../assets/Make_A_Wish_logo.jpg";
+import { useWorks } from "./context/WorkContext";
 
 const Sidebar = ({ children }) => {
   const menuItem = [
@@ -26,23 +27,13 @@ const Sidebar = ({ children }) => {
       icon: <MdIcons.MdWorkOutline />,
     },
   ];
-  const [nameStack, setNameStack] = useState([
-    "Sophia Davis",
-    "Jacob Martinez",
-    "Mia Brown",
-    "Ethan Lee",
-    "Olivia Johnson",
-  ]);
-  function addNameToStack(name) {
-    setNameStack([...nameStack, name]);
-  }
-  function getInitials(name) {
-    let initials = "";
-    const nameArray = name.split(" ");
-    for (let i = 0; i < nameArray.length; i++) {
-      initials += nameArray[i].charAt(0);
-    }
-    return initials.toUpperCase();
+  const { nameStack } = useWorks();
+  const reverseNameStack = nameStack.slice().reverse();
+  const [fullName, setFullName] = useState("");
+  const [isDisplay, setIsDisplay] = useState(false);
+  const handleDisplay = (name, display) => {
+    setIsDisplay(display)
+    setFullName(name)
   }
 
   return (
@@ -59,10 +50,13 @@ const Sidebar = ({ children }) => {
             <div className="icon">{item.icon}</div>
           </NavLink>
         ))}
-        <div className="name-stack">
-          {nameStack.map((name, index) => (
-            <div className="name">{getInitials(name)}</div>
-          ))}
+        <div className={`name-tip ${isDisplay ? "active" : ""}`}>{fullName}</div>
+        <div className="name-container">
+          <div className="name-stack">
+            {reverseNameStack.map(([name, initials], index) => (
+              <div className="name" onMouseEnter={() => handleDisplay(name, true)} onMouseLeave={() => handleDisplay(name, false)}>{initials}</div>
+            ))}
+          </div>
         </div>
       </div>
       <main>{children}</main>
