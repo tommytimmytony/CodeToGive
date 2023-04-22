@@ -119,3 +119,41 @@ p {
   display: grid;
   grid-template-columns: 60px 1fr;
 }
+
+.search-name-container{
+  display: flex;
+}
+
+.name-container {
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: rgba(245, 245, 245, 0.913);
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  width: 286px;
+  height: 50px;
+}
+
+.name-stack {
+  display:flex;
+}
+
+.name {
+  padding: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 40%;
+  background-color: rgb(97, 168, 249);
+  height: 30px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.active{
+  display: grid;
+}
