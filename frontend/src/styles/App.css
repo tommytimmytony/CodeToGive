@@ -10,16 +10,20 @@
 }
 
 /* HomePage - Style */
-.App{
+.App {
   background-color: #67acfb92;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px;
+}
+
+.home-container {
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
 }
 
 .welcome-container {
   padding-left: 30px;
 }
-
 
 /* Login/SignUp - Style  */
 .login-container {
@@ -78,7 +82,6 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  
 }
 
 input[type="submit"]:hover {
@@ -88,4 +91,28 @@ input[type="submit"]:hover {
 p {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+/* Chats app Style */
+.chats-app-container {
+  background-color: rgb(40, 43, 54);
+}
+
+.back-button {
+  background-color: rgb(40, 43, 54);
+  font-size: 30px;
+  padding: 10px;
+  display: grid;
+  place-content: center;
+  transition: transform 0.3s ease;
+  color: rgb(255, 0, 0);
+  float: left;
+  cursor: pointer;
+}
+
+
+/* Work Page Style */
+.work-page-container{
+  display: grid;
+  grid-template-columns: 60px 1fr;
 }

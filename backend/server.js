@@ -46,7 +46,7 @@ app.post("/signup", async (req, res) => {
     if (check) {
       res.json("exist");
     } else {
-      res.json("Added user");
+      res.json("not exist");
       await collection.insertMany([data]);
     }
   } catch (e) {
