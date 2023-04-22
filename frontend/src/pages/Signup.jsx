@@ -21,13 +21,13 @@ const Signup = () => {
         .then((res) => {
           console.log(res.data)
           if (res.data == "exist") {
-            alert("User has already exists");
+            alert("User already exists");
           } else if (res.data == "not exist") {
             navigate("/home", {state: { id: username } });
           }
         })
         .catch((e) => {
-          alert("wrong details or DB is not connect pleast check");
+          alert("Incorrect details or Database is not connected, please check");
           console.log(e);
         });
     } catch {
