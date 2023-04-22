@@ -51,6 +51,7 @@ const WorkPage = () => {
               pic={logo}
               guardian={item.guardian}
               contact={item.contact}
+              progress={item.progress}
             />
           ))}
         </div>

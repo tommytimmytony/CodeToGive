@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import logo from "../assets/Make_A_Wish_logo.jpg";
 import "../styles/Card.css";
 import { useWorks } from "./context/WorkContext";
-
-const Card = ({ name, wish, pic, guardian, contact }) => {
+import Progressbar from "./Progressbar";
+const Card = ({ name, wish, pic, guardian, contact, progress }) => {
   const { addNameToStack } = useWorks();
   return (
     <div
@@ -22,6 +22,7 @@ const Card = ({ name, wish, pic, guardian, contact }) => {
         </div>
         <div className="card-body">{guardian}</div>
         <div className="card-body">{contact}</div>
+        <Progressbar done={progress}/>
       </div>
     </div>
   );

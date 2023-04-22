@@ -76,9 +76,6 @@
   overflow: hidden;
 }
 
-.name-stack {
-  margin-top: 10px;
-}
 
 .name {
   padding-top: 5px;
@@ -105,6 +102,8 @@
   border-radius: 7px;
   display: none;
   place-items: center;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .name-tip::before {
