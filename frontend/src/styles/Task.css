@@ -1,0 +1,38 @@
+.unactive {
+    text-decoration: line-through;
+}
+.active, .unactive{
+    font-size: 1.3vw;
+    border-radius: 15px;
+    padding: 3.5vw;
+    display: block;
+    margin-right: 1.5vw;
+    margin-top: 1.5vw;
+    word-wrap: break-word;
+    transition: width 0s, height 0s;
+    font-family: 'Carlito', sans-serif;
+    color: white;
+    font-weight: 10;
+}
+.unactive{
+    background-color: rgb(125, 223, 103);
+    pointer-events: none;
+    color: black;
+}
+
+.active{
+    background-color: rgb(190, 190, 190);
+    color: black;
+}
+
+.active:not(:hover), .active:hover, .unactive:not(:hover), .unactive:hover{
+    transition: 0.9s;
+}
+
+.active:hover, .unactive:hover{
+    cursor:pointer;
+}
+
+.active:hover{
+    background-color: rgb(214, 214, 214);
+}

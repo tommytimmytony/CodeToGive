@@ -1,0 +1,14 @@
+.override {
+    /*background-color: rgb(252, 252, 252);*/
+    height:130vh;
+    overflow: hidden;
+}
+
+.header{
+    margin-top: -4px;
+}
+
+.back-button{
+    width: 1vw;
+    padding: 1vw;
+}
