@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import {
   useLocation,
   useNavigate,
@@ -8,25 +8,21 @@ import {
 } from "react-router-dom";
 import ChatsApp from "./Chatsapp";
 import ReminderTask from "./ReminderTask";
+import WorkPage from "./WorkPage";
 import Sidebar from "../components/Sidebar";
-import "../styles/App.css"
+import "../styles/App.css";
 
 const Home = () => {
-  const location = useLocation();
-  // return (
-  //     <div className="homepage">
-  //         <h1>Hello {location.state.id} and welcome to the home</h1>
-  //     </div>
-  // )
   return (
     <div className="home-container">
       <Sidebar>
-        <h1 className="welcome-container">Hello {location.state.id} and welcome to the Home</h1>
         <Routes>
           <Route path="/chatsapp" element={<ChatsApp />} />
           <Route path="/remindertask" element={<ReminderTask />} />
+          <Route path="/workpage" element={<WorkPage />} />
         </Routes>
       </Sidebar>
+      <h1 className="welcome-container">Hello and welcome to the Home</h1>
     </div>
   );
 };

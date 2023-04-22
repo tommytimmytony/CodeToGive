@@ -19,10 +19,11 @@ const Signup = () => {
           password,
         })
         .then((res) => {
+          console.log(res.data)
           if (res.data == "exist") {
             alert("User has already exists");
           } else if (res.data == "not exist") {
-            navigate("/home", { state: { id: username } });
+            navigate("/home", {state: { id: username } });
           }
         })
         .catch((e) => {

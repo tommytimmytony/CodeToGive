@@ -14,24 +14,24 @@ const Login = () => {
         e.preventDefault()
         // Don't Delete! MongoDb connection
         // Comment-out if you want to disconnect the backend
-        try{
-            await axios.post(`http://localhost:${PORT}/`,{
-                username, password
-            }).then(res => {
-                if (res.data == "exist"){
-                    navigate("/home", {state:{id:username}})
-                } else if (res.data == "not exist"){
-                    alert("User have not sign up")
-                }
-            }).catch((e) => {
-                alert("Either wrong details or DB is not connect please check")
-                console.log(e)
-            })
-        } catch{
-            console.log(e)
-        }
-        // Navigate to the home
-        // navigate("/home", {state: {id:username}})
+        // try{
+        //     await axios.post(`http://localhost:${PORT}/`,{
+        //         username, password
+        //     }).then(res => {
+        //         if (res.data == "exist"){
+        //             navigate("/home", {state:{id:username}})
+        //         } else if (res.data == "not exist"){
+        //             alert("User have not sign up")
+        //         }
+        //     }).catch((e) => {
+        //         alert("Either wrong details or DB is not connect please check")
+        //         console.log(e)
+        //     })
+        // } catch{
+        //     console.log(e)
+        // }
+        //Navigate to the home
+        navigate("/home", {state: {id:username}})
     }
   return (
     <div className="login-container">
