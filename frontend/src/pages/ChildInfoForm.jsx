@@ -9,9 +9,9 @@ const ChildInfoForm = () => {
     for(let page in formPages){
         document.getElementsById(page).style.display = "none";
     }*/
+
     
-    document.getElementById("tab2").style.color = "red";
-    document.getElementById("tab3").style.color = "red";
+    //document.getElementById("tab3").style.color = "red";
     
 
     let currentPage = formPages[currentPageNumber];
@@ -31,44 +31,44 @@ const ChildInfoForm = () => {
             <h1> Wish Child Form </h1>
             <p>We are eager to get you started on the journey to get your child's wish granted, but first we just need some information.</p>
             <form id="regForm">
-                <h2>General Information</h2>
-                <div className="tab1" id="tab1">
+                <div className="tab1" id="tab1-one">
+                    <h3>General Information</h3>
                     <label> Child First Name </label>
-                    <input type="text" name="child_first" required />
+                    <input type="text" name="child_first" className="form-input" required />
                     <br/> <br />
                     <label for="child_last"> Child Last Name </label>
-                    <input type="text" name="child_last" required />
+                    <input type="text" name="child_last" className="form-input" required />
                     <br /> <br />
                     <label for="dob"> Date of Birth </label>
-                    <input type="date" name="dob" id="dob" min="2004-04-22" max="2022-04-22" required />
+                    <input type="date" name="dob" id="dob" min="2004-04-22" max="2022-04-22" className="form-input" required />
                     <br /> <br />
                     <label for="guardian_first"> Guardian First Name </label>
-                    <input type="text" name="guardian_first" required />
+                    <input type="text" name="guardian_first" className="form-input" required />
                     <br /> <br />
                     <label for="guardian_last"> Guardian Last Name </label>
-                    <input type="text" name="guardian_last" required />
+                    <input type="text" name="guardian_last" className="form-input" required />
                     <br /> <br />
                     <label for="phone"> Guardian Phone Number </label>
-                    <input type="tel" id="pmp_phone" name="pmp_phone" pattern="^\d{3}-\d{3}-\d{4}$" required />
+                    <input type="tel" id="pmp_phone" name="pmp_phone" pattern="^\d{3}-\d{3}-\d{4}$" className="form-input" required />
                     <br />
                     <br />
                     <label for="pcp_first"> PCP First Name </label>
-                    <input type="text" name="pcp_first" required />
+                    <input type="text" name="pcp_first" className="form-input" required />
                     <br /> <br />
                     <label for="pcp_last"> PCP Last Name </label>
-                    <input type="text" name="pcp_last" required />
+                    <input type="text" name="pcp_last" className="form-input" required />
                     <br /> <br />
                     <label for="pmp_phone"> PCP Contact </label>
-                    <input type="tel" id="pmp_phone" name="pmp_phone" pattern="^\d{3}-\d{3}-\d{4}$" required />
+                    <input type="tel" id="pmp_phone" name="pmp_phone" pattern="^\d{3}-\d{3}-\d{4}$" className="form-input" required />
                     <br/> <br/>
                     <label for="address">Home Address:</label>
-                    <input name="address" type="address" required />
+                    <input name="address" type="address" className="form-input" required />
                     <br/> <br/>
                     <label for="medical-condition">Wish Child's Medical Condition:</label>
-                    <input name="medical-condition" type="text"></input>
+                    <input name="medical-condition" type="text" className="form-input" required />
                     <br/> <br/>
                     <label for="primary-email">Email Address</label>
-                    <input type="email" id="email" pattern=".+@globex\.com" required/>
+                    <input type="email" id="email" pattern=".+@globex\.com" className="form-input" required/>
                     <br/> <br/>
                 </div>
                 <div className="tab2" id="tab2">
@@ -83,28 +83,28 @@ const ChildInfoForm = () => {
                     </select>
                     <br /> <br />
                     <label for="color">Favorite Color </label>
-                    <input type="text" name="color" />
+                    <input type="text" name="color" className="form-input" />
                     <br /> <br />
                     <label for="book_story">Book/Story</label>
-                    <input type="text" name="book_story" />
+                    <input type="text" name="book_story" className="form-input" />
                     <br /> <br />
                     <label for="food">Food</label>
-                    <input type="food" />
+                    <input type="food" className="form-input" />
                     <br /> <br />
                     <label for="subject">Subject</label>
-                    <input type="text" for="subject" />
+                    <input type="text" for="subject" className="form-input" />
                     <br /> <br />
                     <label for="singer">Band or Singer</label>
-                    <input type="text" />
+                    <input type="text" className="form-input" />
                     <br /> <br />
                     <label for="movie_show">Show or Movie</label>
-                    <input type="text" />
+                    <input type="text" className="form-input" />
                     <br /> <br />
                     <label for="actor">Actor/Actress</label>
-                    <input type="text" name="actor" />
+                    <input type="text" name="actor" className="form-input" />
                     <br /> <br />
                     <label for="athlete">Athlete/Sport Team</label>
-                    <input type="text" name="athlete" />
+                    <input type="text" name="athlete" className="form-input" />
                     <br /> <br />
                 </div>
                 <div className="tab3" id="tab3">
@@ -113,13 +113,13 @@ const ChildInfoForm = () => {
                          who may be driving during the course of the wish.</p>
                     <br />
                     <label for="driver"> Preferred Driver Name </label>
-                    <input type="text" name="driver" required />
+                    <input type="text" name="driver" className="form-input" required />
                     <br /> <br />
                     <label for="license_num"> Valid D.L # </label>
-                    <input type="license_num" required />
+                    <input type="license_num" className="form-input" required />
                     <br /> <br />
                     <label for="exp_date">Expiration date</label>
-                    <input type="date" name="exp_date" id="exp_date" min="2023-04-22" required />
+                    <input type="date" name="exp_date" id="exp_date" min="2023-04-22" className="form-input" required />
                     <br /> <br />
                     <p>Do you have current automobile insurance?</p>
                     <input className="checkbox_input" type="checkbox" for="auto_insurance_yes" />
