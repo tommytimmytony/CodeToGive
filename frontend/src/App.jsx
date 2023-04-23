@@ -6,6 +6,7 @@ import { useState } from "react";
 import ChatsApp from "./pages/Chatsapp";
 import ReminderTask from "./pages/ReminderTask";
 import WorkPage from "./pages/WorkPage";
+import DetailPage from "./pages/DetailPage";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/chatsapp" element={<ChatsApp />} />
           <Route path="/remindertask" element={<ReminderTask />} />
           <Route path="/workpage" element={<WorkPage />} />
+          <Route path="/workpage/detailpage/:id" element={<DetailPage />} />
         </Routes>
       </Router>
     </div>

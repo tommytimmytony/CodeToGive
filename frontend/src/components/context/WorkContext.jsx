@@ -22,7 +22,7 @@ export const WorkProvider = ({ children }) => {
       ([fullName ]) => fullName !== name
     );
 
-    // nameStack-container could only show 9 element 
+    // nameStack-container could only show 8 element 
     if (nameStack.length >= 9){
         nameStack.shift()
     }
