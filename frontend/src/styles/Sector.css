@@ -22,7 +22,7 @@
   /* This sector format will display as Card */
   padding: 10px;
   width: 200px;
-  height: 350px;
+  min-height: 350px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   transition: transform 0.3s ease;
@@ -32,12 +32,9 @@
 
 hr {
   border: none;
-  border-top: 5px dotted;
+  border-top: 3px solid;
 }
 
-.info-line {
-  border-top: 3px solid; 
-}
 .sector-info {
   padding: 10px;
   margin-right: 30px;
@@ -57,7 +54,6 @@ hr {
   box-shadow: 0px 0px 15px -5px;
   transition: transform 0.3s ease;
   background-color: rgba(240, 248, 255, 0.924);
-  width: 700px;
 }
 
 .sector-info-card {
