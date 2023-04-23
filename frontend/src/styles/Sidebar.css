@@ -5,19 +5,12 @@
 .sidebar {
   width: 40px;
   height: 100vh;
-  background-color: #333;
+  background-color: #333333;
   color: #fff;
   padding: 20px;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 16px;
-}
-
-.Logo {
-  width: 40px;
-  height: 40px;
-  padding-top: 5px;
-  transition: transform 0.3s ease;
 }
 
 .sidebar .top_section {
@@ -49,6 +42,13 @@
   display: inline-block;
 }
 
+.Logo {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
 .icon:hover,
 .Logo:hover {
   transform: scale(1.4);
@@ -67,4 +67,3 @@
   place-content: center;
   transition: transform 0.3s ease;
 }
-

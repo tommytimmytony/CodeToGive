@@ -11,7 +11,7 @@ import ReminderTask from "./ReminderTask";
 import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
 import "../styles/App.css";
-import logo from "../assets/Make_A_Wish_logo.jpg";
+import logo from "../assets/Make_A_Wish_favicon.png";
 import cardExamples from "../assets/cardExamples";
 import { useWorks } from "../components/context/WorkContext";
 

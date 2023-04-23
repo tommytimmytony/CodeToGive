@@ -7,12 +7,13 @@ export function useWorks() {
 }
 
 export const WorkProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState("")
   const [nameStack, setNameStack] = useState([
-    ["Julian Ortiz","JO"],
-    ["Emma Sanchez","EM"],
-    ["Liam Flores","LF"],
-    ["Sofia Ramirez","SR"],
-    ["Mia Wilson","MW"]
+    ["Natalie Gray","NG"],
+    ["Chloe White","CW"],
+    ["Carla Smith","CS"],
+    ["Samantha Johnson","SJ"],
+    ["Logan Green","LG"]
   ]);
 
   function addNameToStack({name}) {
@@ -38,6 +39,8 @@ export const WorkProvider = ({ children }) => {
   return (
     <WorkContext.Provider
       value={{
+        currentUser,
+        setCurrentUser,
         nameStack,
         addNameToStack,
       }}

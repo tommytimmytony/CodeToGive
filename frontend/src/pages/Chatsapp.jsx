@@ -18,8 +18,8 @@ const ChatsApp = (props) => {
       </div>
       <PrettyChatWindow
         projectId={"e5af117e-4a86-4db4-a1eb-22cb75e2efc8"}
-        username={"Tommy"}
-        secret={"123"}
+        username={"V"}
+        secret={"admin"}
       />
     </div>
   );

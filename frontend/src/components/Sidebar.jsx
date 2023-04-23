@@ -5,7 +5,7 @@ import * as BiIcons from "react-icons/bi";
 import * as MdIcons from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css";
-import logo from "../assets/Make_A_Wish_logo.jpg";
+import logo from "../assets/Make_A_Wish_favicon.png";
 
 const Sidebar = ({ children }) => {
   const menuItem = [

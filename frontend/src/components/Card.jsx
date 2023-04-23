@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import logo from "../assets/Make_A_Wish_logo.jpg";
 import "../styles/Card.css";
 import { useWorks } from "./context/WorkContext";
 import Progressbar from "./Progressbar";

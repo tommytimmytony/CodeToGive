@@ -10,9 +10,12 @@ import ChatsApp from "./Chatsapp";
 import ReminderTask from "./ReminderTask";
 import WorkPage from "./WorkPage";
 import Sidebar from "../components/Sidebar";
+import { useWorks } from "../components/context/WorkContext";
 import "../styles/App.css";
 
 const Home = () => {
+  const {currentUser} = useWorks()
+
   return (
     <div className="home-container">
       <Sidebar>
@@ -22,7 +25,7 @@ const Home = () => {
           <Route path="/workpage" element={<WorkPage />} />
         </Routes>
       </Sidebar>
-      <h1 className="welcome-container">Hello and welcome to the Home</h1>
+      <h1 className="welcome-container">Hello {currentUser} and welcome to the Home Page</h1>
     </div>
   );
 };

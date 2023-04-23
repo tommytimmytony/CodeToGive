@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import { useWorks } from "../components/context/WorkContext";
 import "../styles/App.css"
 const PORT = 4000;
 
@@ -9,8 +10,9 @@ const Login = () => {
     const navigate = useNavigate()
     const [username, setUserName] = useState("")
     const [password, setPassword] = useState("")
-
+    const {setCurrentUser} = useWorks()
     const submit = async (e) => {
+
         e.preventDefault()
         // Don't Delete! MongoDb connection
         // Comment-out if you want to disconnect the backend
@@ -31,6 +33,7 @@ const Login = () => {
         //     console.log(e)
         // }
         //Navigate to the home
+        setCurrentUser(username)
         navigate("/home", {state: {id:username}})
     }
   return (
