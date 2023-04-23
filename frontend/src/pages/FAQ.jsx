@@ -8,7 +8,8 @@ const FAQ = () => {
     <div className="work-page-container">
       <SidebarContainer />
       <div>
-        <div className="sector-container" style={{placeItems: "center"}}>
+        <h1>FAQ page</h1>
+        <div className="sector-container" style={{ placeItems: "center" }}>
           {faqExamples.map((item, index) => (
             <Sector
               title={item.title}
