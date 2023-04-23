@@ -3,6 +3,7 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as BiIcons from "react-icons/bi";
 import * as MdIcons from "react-icons/md";
+import { SiReacthookform } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css";
 import logo from "../assets/Make_A_Wish_favicon.png";
@@ -24,6 +25,11 @@ const Sidebar = ({ children }) => {
       name: "WorkPage",
       icon: <MdIcons.MdWorkOutline />,
     },
+    {
+      path: "/childform",
+      name: "ChildInfoForm",
+      icon: <SiReacthookform />
+    }
   ];
 
   return (

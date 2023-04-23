@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ChatsApp from "./Chatsapp";
 import ReminderTask from "./ReminderTask";
+import ChildInfoForm from "./ChildInfoForm";
 import WorkPage from "./WorkPage";
 import Sidebar from "../components/Sidebar";
 import { useWorks } from "../components/context/WorkContext";
@@ -23,6 +24,7 @@ const Home = () => {
           <Route path="/chatsapp" element={<ChatsApp />} />
           <Route path="/remindertask" element={<ReminderTask />} />
           <Route path="/workpage" element={<WorkPage />} />
+          <Route path="/childform" element={<ChildInfoForm />} />
         </Routes>
       </Sidebar>
       <h1 className="welcome-container">Hello {currentUser} and welcome to the Home Page</h1>
