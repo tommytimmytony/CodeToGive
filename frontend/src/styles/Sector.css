@@ -1,0 +1,66 @@
+.sector-container {
+  padding: 10px;
+  display: grid;
+  /* grid-template-columns: 30px 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-left: 20px;
+  margin-top: 0px;
+  grid-gap: 10px;
+}
+
+.sector {
+  /* This sector format will take up the whole space */
+
+  /* padding: 10px;
+  margin-right: 40px;
+  grid-column: 2 / -1;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: transform 0.3s ease;
+  background-color: rgba(240, 248, 255, 0.924); */
+
+  /* This sector format will display as Card */
+  padding: 10px;
+  width: 200px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: transform 0.3s ease;
+  background-color: rgba(240, 248, 255, 0.924);
+}
+
+hr {
+  border: none;
+  border-top: 5px dotted;
+}
+
+.sector-info {
+  padding: 10px;
+  margin-right: 40px;
+  grid-column: 2 / -1;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: transform 0.3s ease;
+  background-color: rgba(240, 248, 255, 0.924);
+}
+
+.sector-info-faq {
+  padding: 10px;
+  margin-right: 40px;
+  grid-column: 2 / -1;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: transform 0.3s ease;
+  background-color: rgba(240, 248, 255, 0.924);
+  width: 500px;
+}
+
+.sector-info-card {
+  padding: 10px;
+  width: 200px;
+  min-height: 350px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: transform 0.3s ease;
+  background-color: rgba(240, 248, 255, 0.924);
+}

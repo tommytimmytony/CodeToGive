@@ -1,8 +1,8 @@
 const cardExamples = [
   {
-    name: "Aiden Anderson",
+    name: "Borg Anderson",
     wish: "To go on a fishing trip with his dad",
-    guardian: "Linda Anderson (Grandmother)",
+    guardian: "David Anderson (Father)",
     contact: "555-234-5678",
     progress: 50,
   },
@@ -14,7 +14,7 @@ const cardExamples = [
     progress: 75,
   },
   {
-    name: "Alexandra Abbott",
+    name: "Sam Abbott",
     wish: "To go to New York City",
     guardian: "Stephanie Abbott (Mother)",
     contact: "555-456-7890",
@@ -61,6 +61,20 @@ const cardExamples = [
     guardian: "David Davis (Father)",
     contact: "555-123-4567",
     progress: 75,
+  },
+  {
+    name: "Davi Santos",
+    wish: "To meet Neymar",
+    guardian: "Neymar Santos (Father)",
+    contact: "302-303-2035",
+    progress: 100,
+  },
+  {
+    name: "Miles Davis",
+    wish: "To play the trumpet",
+    guardian: "Sammy Davis (Brother)",
+    contact: "203-303-3333",
+    progress: 50,
   },
   {
     name: "Emily Green",
@@ -153,7 +167,7 @@ const cardExamples = [
   },
   {
     name: "Samantha Johnson",
-    wish: "To meet her favorite author, Stephen King",
+    wish: "To meet Stephen King",
     guardian: "Michael Johnson (Father)",
     contact: "555-987-6543",
     progress: 80,
