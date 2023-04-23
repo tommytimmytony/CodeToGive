@@ -14,20 +14,27 @@ const Card = ({ name, wish, pic, guardian, contact, progress, className, lists, 
     return total.toLocaleString();
   }
   return (
-    <div className={className} onClick={() => addNameToStack({ name: name })}>
+    <div>
       {className == "sector-info-card" ? (
-        <div className="card-content">
-          <div className="card-title">
-            <h3>{name}</h3>
+        <div
+          className={className}
+        >
+          <div className="card-content">
+            <div className="card-title">
+              <h3>{name}</h3>
+            </div>
+            <div className="card-sub-title">
+              <h4>{wish}</h4>
+            </div>
+            <List lists={lists} />
+            {cardTitle == "Budget" ? <h2>Total: ${getTotal(lists)}</h2> : ""}
           </div>
-          <div className="card-sub-title">
-            <h4>{wish}</h4>
-          </div>
-          <List lists={lists} />
-          {cardTitle == "Budget" ? <h2>Total: ${getTotal(lists)}</h2> : ""}
         </div>
       ) : (
-        <div>
+        <div
+          className={className}
+          onClick={() => addNameToStack({ name: name })}
+        >
           <div className="image-container">
             <img src={pic} alt="" />
           </div>
