@@ -7,6 +7,7 @@ import ChatsApp from "./pages/Chatsapp";
 import ReminderTask from "./pages/ReminderTask";
 import WorkPage from "./pages/WorkPage";
 import DetailPage from "./pages/DetailPage";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/remindertask" element={<ReminderTask />} />
           <Route path="/workpage" element={<WorkPage />} />
           <Route path="/workpage/detailpage/:id" element={<DetailPage />} />
+          <Route path="/faq" element={<FAQ/>}/>
         </Routes>
       </Router>
     </div>

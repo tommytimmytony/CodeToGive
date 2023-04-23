@@ -7,15 +7,12 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-import ChatsApp from "./Chatsapp";
-import ReminderTask from "./ReminderTask";
-import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
 import "../styles/App.css";
 import logo from "../assets/Make_A_Wish_favicon.png";
 import cardExamples from "../assets/examples/cardExamples";
 import { useWorks } from "../components/context/WorkContext";
-
+import SidebarContainer from "../components/SidebarContainer";
 const WorkPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { nameStack } = useWorks();
@@ -26,13 +23,7 @@ const WorkPage = () => {
   };
   return (
     <div className="work-page-container">
-      <Sidebar>
-        <Routes>
-          <Route path="/chatsapp" element={<ChatsApp />} />
-          <Route path="/remindertask" element={<ReminderTask />} />
-          <Route path="/workpage" element={<WorkPage />} />
-        </Routes>
-      </Sidebar>
+      <SidebarContainer/>
       <div>
         <div className="search-name-container">
           <div class="search-wrapper">

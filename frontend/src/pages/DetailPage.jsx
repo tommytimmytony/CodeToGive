@@ -17,6 +17,7 @@ import cardSectorInfoExamples from "../assets/examples/cardSectorInfoExamples";
 import logo from "../assets/Make_A_Wish_favicon.png";
 import { useWorks } from "../components/context/WorkContext";
 import Sector from "../components/Sector";
+import SidebarContainer from "../components/SidebarContainer";
 function DetailPage({name}) {
     const {id} = useParams()
     console.log(id)
@@ -24,13 +25,7 @@ function DetailPage({name}) {
     const personInfo = cardExamples[index]
   return (
     <div className="work-page-container">
-      <Sidebar>
-        <Routes>
-          <Route path="/chatsapp" element={<ChatsApp />} />
-          <Route path="/remindertask" element={<ReminderTask />} />
-          <Route path="/workpage" element={<WorkPage />} />
-        </Routes>
-      </Sidebar>
+      <SidebarContainer/>
       <div>
         <h1>{personInfo.name}</h1>
         <div className="search-name-container">

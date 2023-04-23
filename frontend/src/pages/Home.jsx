@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ChatsApp from "./Chatsapp";
-import ReminderTask from "./ReminderTask";
-import WorkPage from "./WorkPage";
-import Sidebar from "../components/Sidebar";
 import Sector from "../components/Sector";
 import { useWorks } from "../components/context/WorkContext";
 import sectorExamples from "../assets/examples/sectorExamples";
 import sectorInfoExamples from "../assets/examples/sectorInfoExamples";
+import SidebarContainer from "../components/SidebarContainer";
 import "../styles/App.css";
 import "../styles/Sector.css";
 
@@ -17,13 +14,7 @@ const Home = () => {
     // This home-page is similiar to the work-page
     // Therefore we use them same container
     <div className="work-page-container">
-      <Sidebar>
-        <Routes>
-          <Route path="/chatsapp" element={<ChatsApp />} />
-          <Route path="/remindertask" element={<ReminderTask />} />
-          <Route path="/workpage" element={<WorkPage />} />
-        </Routes>
-      </Sidebar>
+      <SidebarContainer/>
       <div>
         <h1>
           {currentUser
