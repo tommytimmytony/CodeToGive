@@ -1,7 +1,7 @@
 # CodeToGive
 ## How to run the application
 
-1. Install the latest version of vite using npm
+1. Opening the application in VsCode and open a terminal:
    `cd to frontend`
 
 2. Install the app's dependencies (if first time opening the app):
