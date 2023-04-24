@@ -23,3 +23,15 @@ form{
     font-size: 1.5vw;
     display: inline-block;
 }
+.tab2, .tab3{
+    display: none;
+}
+
+#prev {
+    cursor: not-allowed;
+}
+
+.back-button {
+    background-color: inherit;
+    color: black;
+}
