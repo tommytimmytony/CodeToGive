@@ -163,11 +163,3 @@ p {
 .active {
   display: grid;
 }
-
-/* Detail style Page */
-.detail-name-container {
-  display: flex;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
