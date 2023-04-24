@@ -73,26 +73,6 @@ const Home = () => {
     </div>
     </div>
   );
-  };
-  //   <div className="home-container">
-  //     <Sidebar>
-  //       <Routes>
-  //         <Route path="/chatsapp" element={<ChatsApp />} />
-  //         <Route path="/remindertask" element={<ReminderTask />} />
-  //         <Route path="/workpage" element={<WorkPage />} />
-  //       </Routes>
-  //     </Sidebar>
-  //     <div>
-  //       <div className="welcome-container">
-  //         <h1>Hello {currentUser} and welcome to the Home Page</h1>
-  //         <div className="sector-container">
-  //           {sectorExamples.map((item, index) => (
-  //             <Sector title={item.title} body={item.body} />
-  //           ))}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
-  
+};
+
 export default Home;
