@@ -57,6 +57,9 @@ const Sidebar = ({ children }) => {
             <div className="icon">{item.icon}</div>
           </NavLink>
         ))}
+        <NavLink to={"/"}className="logout">
+          <div className="icon">{<AiIcons.AiOutlineArrowLeft/>}</div>
+        </NavLink>
       </div>
       <main>{children}</main>
     </div>
