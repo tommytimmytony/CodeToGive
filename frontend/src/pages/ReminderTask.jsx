@@ -55,75 +55,78 @@ const ReminderTask = () => {
   const [displayText, setDisplayText] = useState("");
 
   return (
-    <div>
-    <SidebarContainer/>
-      <h1 style={{ fontFamily: "Georgia", fontSize: "40px" }}>DashBoard</h1>
-      <p style={{ fontFamily: "Palatino Linotype", fontSize: "20px" }}>
-        You have {pendingTasks.length} pending tasks to complete.
-      </p>
-      {displayText && <p>{displayText}</p>}
-      <ul style={{ listStyleType: "none", padding: 0 }}>
-        {pendingTasks.map((task) => (
-          <li key={task.id}>
-            <button
-              id={task.id}
-              style={{
-                width: "200px",
-                height: "100px",
-                color: "white",
-                backgroundColor: "#87CEFA",
-                border: "none",
-                borderRadius: "5px",
-                margin: "20px",
-                cursor: "pointer",
-                position: "relative",
-                overflow: "hidden",
-                zIndex: "1",
-                transition: "color 0.5s",
-              }}
-              onMouseEnter={(event) => {
-                event.currentTarget.style.backgroundColor = "white";
-                event.currentTarget.style.color = "#000";
-              }}
-              onMouseLeave={(event) => {
-                event.currentTarget.style.backgroundColor = "#87CEFA";
-                event.currentTarget.style.color = "white";
-              }}
-              onClick={(event) => {
-                handleComplete(task.id);
-                const applause = document.createElement("span");
-                applause.innerText = "👏";
-                applause.style.position = "absolute";
-                applause.style.top = "50%";
-                applause.style.left = "50%";
-                applause.style.transform = "translate(-50%, -50%)";
-                applause.style.fontSize = "50px";
-                applause.style.opacity = "1";
-                applause.style.animation = "applause 1s ease-out forwards";
-                applause;
-                event.currentTarget.appendChild(applause);
-                setTimeout(
-                  () => event.currentTarget.removeChild(applause),
-                  1000
-                );
-              }}
-            >
-              {task.description}
-              <span
+    <div className="work-page-container">
+      <div>
+        <SidebarContainer />
+      </div>
+      <div>
+        <h1 style={{ fontFamily: "Georgia", fontSize: "40px" }}>DashBoard</h1>
+        <p style={{ fontFamily: "Palatino Linotype", fontSize: "20px" }}>
+          You have {pendingTasks.length} pending tasks to complete.
+        </p>
+        {displayText && <p>{displayText}</p>}
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          {pendingTasks.map((task) => (
+            <li key={task.id}>
+              <button
+                id={task.id}
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: "-100%",
-                  width: "100%",
-                  height: "100%",
+                  width: "200px",
+                  height: "100px",
+                  color: "white",
                   backgroundColor: "#87CEFA",
-                  zIndex: "3",
-                  transition: "0.5s",
+                  border: "none",
+                  borderRadius: "5px",
+                  margin: "20px",
+                  cursor: "pointer",
+                  position: "relative",
+                  overflow: "hidden",
+                  zIndex: "1",
+                  transition: "color 0.5s",
                 }}
-              />
-            </button>
-            <style>
-              {` 
+                onMouseEnter={(event) => {
+                  event.currentTarget.style.backgroundColor = "white";
+                  event.currentTarget.style.color = "#000";
+                }}
+                onMouseLeave={(event) => {
+                  event.currentTarget.style.backgroundColor = "#87CEFA";
+                  event.currentTarget.style.color = "white";
+                }}
+                onClick={(event) => {
+                  handleComplete(task.id);
+                  const applause = document.createElement("span");
+                  applause.innerText = "👏";
+                  applause.style.position = "absolute";
+                  applause.style.top = "50%";
+                  applause.style.left = "50%";
+                  applause.style.transform = "translate(-50%, -50%)";
+                  applause.style.fontSize = "50px";
+                  applause.style.opacity = "1";
+                  applause.style.animation = "applause 1s ease-out forwards";
+                  applause;
+                  event.currentTarget.appendChild(applause);
+                  setTimeout(
+                    () => event.currentTarget.removeChild(applause),
+                    1000
+                  );
+                }}
+              >
+                {task.description}
+                <span
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: "-100%",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "#87CEFA",
+                    zIndex: "3",
+                    transition: "0.5s",
+                  }}
+                />
+              </button>
+              <style>
+                {` 
                 button:hover {
                   background-color: white;
                   color: #000;
@@ -132,17 +135,18 @@ const ReminderTask = () => {
                   left: 0; 
                 } 
               `}
-              {`
+                {`
                 @keyframes applause {
                   0% { transform: scale(1); }
                   50% { transform: scale(1.5); }
                   100% { transform: scale(1); }
                 }
               `}
-            </style>
-          </li>
-        ))}
-      </ul>
+              </style>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

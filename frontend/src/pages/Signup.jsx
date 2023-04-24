@@ -38,7 +38,7 @@ const Signup = () => {
     <div className="login-container">
       <div className="login">
         <h1>Signup</h1>
-        <form>
+        <form className="login-form">
           <input
             type="username"
             onChange={(e) => {

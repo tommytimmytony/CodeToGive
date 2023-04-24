@@ -38,6 +38,7 @@ const WorkPage = () => {
               }}
             />
           </div>
+          <h2 style={{marginRight: "5px"}}>History Tab</h2>
           <div className="name-container">
             <div className="name-stack">
               {reverseNameStack.map(([name, initials], index) => (

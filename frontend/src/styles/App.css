@@ -116,7 +116,7 @@ p {
   display: grid;
   place-content: center;
   transition: transform 0.3s ease;
-  color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0) !important;
   float: left;
   cursor: pointer;
 }
@@ -162,4 +162,10 @@ p {
 
 .active {
   display: grid;
+}
+
+/* Detail Style Page */
+.name-info-container{
+  display: grid;
+  place-items: center;
 }

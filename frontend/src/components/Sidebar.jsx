@@ -12,6 +12,11 @@ import logo from "../assets/Make_A_Wish_favicon.png";
 const Sidebar = ({ children }) => {
   const menuItem = [
     {
+      path: "/home",
+      name: "Home",
+      icon: <AiIcons.AiOutlineHome/>
+    },
+    {
       path: "/chatsapp",
       name: "ChatsApp",
       icon: <AiIcons.AiOutlineMessage />,

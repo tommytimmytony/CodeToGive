@@ -1,15 +1,16 @@
-import React from 'react'
-import "../styles/Sector.css"
-import Card from './Card'
-import sectorInfoExamples from '../assets/examples/sectorInfoExamples'
-const Sector = ({title, body, cardTitle, className}) => {
-  console.log(cardTitle)
+import React from "react";
+import "../styles/Sector.css";
+import Card from "./Card";
+import List from "./List";
+import sectorInfoExamples from "../assets/examples/sectorInfoExamples";
+const Sector = ({ title, body, cardTitle, className }) => {
+  console.log(body, cardTitle);
   return (
     <div className={className}>
       <h2 className="sector-title">{title}</h2>
+      <hr />
       {className == "sector-info" ? (
         <div>
-          <hr/>
           <div className="sector-container">
             {cardTitle.map((item, index) => (
               <Card
@@ -21,21 +22,22 @@ const Sector = ({title, body, cardTitle, className}) => {
             ))}
           </div>
         </div>
+      ) : className == "sector" ? (
+        <div>
+          <List lists={body} style={"chunck"} />
+        </div>
       ) : (
         <div>
-          <hr className='info-line'/>
           <h3
             className="sector-body"
-            style={{ wordSpacing: "0.20em", margin: "10px", fontWeight: "500"}}
+            style={{ wordSpacing: "0.20em", margin: "10px", fontWeight: "500" }}
           >
             {body}
           </h3>
         </div>
-      ) : (
-        <h3 className="sector-body" style={{wordSpacing: "0.20em", margin: "10px"}}>{body}</h3>
       )}
     </div>
   );
-}
+};
 
-export default Sector
+export default Sector;

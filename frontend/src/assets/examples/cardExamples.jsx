@@ -1,7 +1,7 @@
 const cardExamples = [
   {
     name: "Borg Anderson",
-    wish: "To go on a fishing trip with his dad",
+    wish: "To visit Disney World",
     guardian: "David Anderson (Father)",
     contact: "555-234-5678",
     progress: 50,
@@ -22,7 +22,7 @@ const cardExamples = [
   },
   {
     name: "Lily Allen",
-    wish: "To meet a famous artist",
+    wish: "To meet Taylor Swift",
     guardian: "Melanie Allen (Mother)",
     contact: "555-123-4567",
     progress: 80,

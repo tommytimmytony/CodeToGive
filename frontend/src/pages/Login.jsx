@@ -40,7 +40,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login">
         <h1>Login</h1>
-        <form action="POST" className="login-form">
+        <form  className="login-form">
           <input
             type="username"
             onChange={(e) => {

@@ -3,7 +3,7 @@
   display: grid;
   /* grid-template-columns: 30px 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-left: 20px;
+  margin-left: 40px;
   margin-top: 0px;
   grid-gap: 10px;
 }
@@ -22,29 +22,28 @@
   /* This sector format will display as Card */
   padding: 10px;
   width: 200px;
-  height: 350px;
+  min-height: 350px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   transition: transform 0.3s ease;
   background-color: rgba(240, 248, 255, 0.924);
+  cursor: pointer;
 }
 
 hr {
   border: none;
-  border-top: 5px dotted;
+  border-top: 3px solid;
 }
 
-.info-line {
-  border-top: 3px solid; 
-}
 .sector-info {
   padding: 10px;
-  margin-right: 40px;
+  margin-right: 30px;
   grid-column: 2 / -1;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   transition: transform 0.3s ease;
   background-color: rgba(240, 248, 255, 0.924);
+  cursor: pointer;
 }
 
 .sector-info-faq {
@@ -55,6 +54,7 @@ hr {
   box-shadow: 0px 0px 15px -5px;
   transition: transform 0.3s ease;
   background-color: rgba(240, 248, 255, 0.924);
+  max-width: 600px
 }
 
 .sector-info-card {

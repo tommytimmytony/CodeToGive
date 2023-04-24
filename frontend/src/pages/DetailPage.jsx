@@ -18,6 +18,7 @@ import logo from "../assets/Make_A_Wish_favicon.png";
 import { useWorks } from "../components/context/WorkContext";
 import Sector from "../components/Sector";
 import SidebarContainer from "../components/SidebarContainer";
+import Progressbar from "../components/Progressbar";
 function DetailPage({name}) {
     const {id} = useParams()
     console.log(id)
@@ -25,43 +26,35 @@ function DetailPage({name}) {
     const personInfo = cardExamples[index]
   return (
     <div className="work-page-container">
-      <SidebarContainer/>
+      <SidebarContainer />
       <div>
-        <h1>{personInfo.name}</h1>
-        <div className="search-name-container">
-          {/* <div class="search-wrapper">
-            <input
-              type="search"
-              id="search"
-              autocomplete="off"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-              }}
-            /> */}
+        <div
+          className="name-info-container"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{marginRight: "60px"}}>
+            <h1>{personInfo.name}</h1>
+          </div>
+          <div>
+            <Progressbar done={personInfo.progress} />
+          </div>
         </div>
-        {/* <div className="name-container"> */}
-        {/* <div className="name-stack">
-              {reverseNameStack.map(([name, initials], index) => (
-                <div className="name" onClick={() => handleSearch(name)}>
-                  {initials}
-                </div>
-              ))}
-            </div> */}
-        {/* </div> */}
-
+      
         <div className="main-card-container">
           <div className="sector-container">
-          {cardSectorInfoExamples.map((item, index) => (
-            <Sector
-              title={item.title}
-              body={item.body}
-              cardTitle={item.cardTitle}
-              className={"sector-info"}
-            />
-          ))}
-        </div>
+            {cardSectorInfoExamples.map((item, index) => (
+              <Sector
+                title={item.title}
+                body={item.body}
+                cardTitle={item.cardTitle}
+                className={"sector-info"}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
