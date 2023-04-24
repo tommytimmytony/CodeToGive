@@ -1,4 +1,4 @@
-p{
+.form-container p{
     font-size: 1.5vw;
 }
 .form-input {
@@ -8,16 +8,19 @@ p{
     margin-left: 1vw;
 }
 
-label, h1{
+.form-container label, h1{
     font-family: 'Carlito', sans-serif;
 
 }
 
+.form-container h1{
+    padding: 2vw;
+}
 .checkbox-labels{
     margin-right: 2vw;
 }
 
-form{
+.form-container form{
     margin-top:2vw;
     padding-bottom: 2vw;
     font-size: 1.5vw;
@@ -31,7 +34,40 @@ form{
     cursor: not-allowed;
 }
 
-.back-button {
+.form-back-button {
+    float: left;
+    padding: 2vw;
     background-color: inherit;
     color: black;
 }
+
+.form-back-button:not(hover), .form-back-button:hover{
+    transition: color .5s;
+}
+
+.form-back-button:hover{
+    color: white;
+}
+
+.form-back-button:hover, #next{
+    cursor: pointer;
+}
+
+.form-footer a{
+    text-decoration: none;
+}
+
+.form-footer a:hover{
+    color: rgb(54, 50, 50);
+}
+.form-footer{
+    padding: 2vw;
+}
+
+.form-container button{
+    width: 7vw;
+    height: 4vw;
+    margin: 2vw;
+    font-size: 1.2vw;
+}
+

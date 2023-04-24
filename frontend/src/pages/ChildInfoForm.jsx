@@ -2,8 +2,8 @@ import React from "react";
 import '../styles/ChildInfoForm.css'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-const ChildInfoForm = () => {
 
+const ChildInfoForm = () => {
     let currentPageNumber = 0;
     const formPages = ["tab1", "tab2", "tab3"];
     const navigate = useNavigate();
@@ -12,7 +12,7 @@ const ChildInfoForm = () => {
     }
     return (
         <div className="form-container">
-            <div className="back-button" onClick={navigateToHome}><IoMdArrowRoundBack size={34}/></div>
+            <div className="form-back-button" onClick={navigateToHome}><IoMdArrowRoundBack size={34}/></div>
             <h1> Wish Child Form </h1>
             <p>We are eager to get you started on the journey to get your child's wish granted, but first we just need some information.</p>
             <form id="regForm">
@@ -107,11 +107,6 @@ const ChildInfoForm = () => {
                     <label htmlFor="exp_date">Expiration date</label>
                     <input type="date" name="exp_date" id="exp_date" min="2023-04-22" className="form-input" required />
                     <br /> <br />
-                    <p>Do you have current automobile insurance?</p>
-                    <input className="checkbox_input" type="checkbox" htmlFor="auto_insurance_yes" />
-                    <label className="checkbox_labels" htmlFor="auto_insurance_yes">Yes</label>
-                    <input className="checkbox_input" type="checkbox" />
-                    <label className="checkbox_labels" htmlFor="auto_insurance_no">No</label>
                 </div>
                 <div className="buttons">
                     <div>
@@ -141,9 +136,8 @@ const ChildInfoForm = () => {
                         }}> Next</button>
                     </div>
                 </div>
-                <button type="submit" id="submit-button">Connect with Make-A-Wish</button>
-    
             </form>
+            <footer className="form-footer"><p>Have questions? Click <a href="/faq"> here </a> to see our most frequently asked questions.</p> </footer>
         </div>
     );
 };
