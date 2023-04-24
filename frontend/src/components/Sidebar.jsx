@@ -3,7 +3,7 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as BiIcons from "react-icons/bi";
 import * as MdIcons from "react-icons/md";
-import { SiReacthookform } from "react-icons/si";
+import * as HiIcons from "react-icons/hi"
 import { NavLink } from "react-router-dom";
 import * as RiIcons from "react-icons/ri"
 import "../styles/Sidebar.css";
@@ -11,11 +11,6 @@ import logo from "../assets/Make_A_Wish_favicon.png";
 
 const Sidebar = ({ children }) => {
   const menuItem = [
-    {
-       path: "/home",
-      name: "Home",
-      icon: <AiIcons.AiOutlineHome />,
-    },
     {
       path: "/chatsapp",
       name: "ChatsApp",
@@ -34,7 +29,7 @@ const Sidebar = ({ children }) => {
     {
       path: "/childform",
       name: "ChildInfoForm",
-      icon: <SiReacthookform />
+      icon: <MdIcons.MdOutlineListAlt />
     },
     {
       path: "/faq",

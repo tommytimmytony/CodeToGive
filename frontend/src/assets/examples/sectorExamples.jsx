@@ -1,68 +1,26 @@
 const sectorExamples = [
   {
     title: "Completed",
-    body: [
-      [
-        "Anthony Jackson",
-        "DOB: 04/11/18",
-        "Wish: To go to Disney",
-        "Progress: 100%",
-      ],
-      [
-        "Anjelica Romero",
-        "DOB: 04/02/15",
-        "Wish: To meet Messi",
-        "Progress: 100%",
-      ],
-    ],
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis reiciendis nesciunt impedit quae, nam nulla. Voluptate, ad! Fugit nihil inventore architecto possimus ratione? Optio est ea voluptates adipisci maiores, earum sunt quod impedit eos repudiandae in a nostrum fugiat eligendi. Voluptas dolore iste, earum possimus facere quod nihil corrupti?",
   },
   {
     title: "Almost Completed",
-    body: [
-      [
-        "Emma Micheals",
-        "DOB: 08/22/14",
-        "Wish: To go to the Zoo",
-        "Progress: 80%",
-      ],
-      [
-        "Meeka Heart",
-        "DOB: 11/12/17",
-        "Wish: To meet Taylor Swift",
-        "Progress: 70%",
-      ],
-    ],
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis reiciendis nesciunt impedit quae, nam nulla. Voluptate, ad! Fugit nihil inventore architecto possimus ratione? Optio est ea voluptates adipisci maiores, earum sunt quod impedit eos repudiandae in a nostrum fugiat eligendi. Voluptas dolore iste, earum possimus facere quod nihil corrupti?",
   },
+
   {
     title: "Alerts",
-    body: [
-      ["Mr.Jackson sent you a message."],
-      ["Meeting at 3PM."],
-      ["Emma Micheals chase her wish."],
-    ],
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis reiciendis nesciunt impedit quae, nam nulla. Voluptate, ad! Fugit nihil inventore architecto possimus ratione? Optio est ea voluptates adipisci maiores, earum sunt quod impedit eos repudiandae in a nostrum fugiat eligendi. Voluptas dolore iste, earum possimus facere quod nihil corrupti?",
   },
   {
     title: "New Applications",
-    body: [
-      [
-        "Sofia Rodriguez",
-        "DOB: 04/11/18",
-        "Wish: To go to Disney",
-        "Progress: Pending...",
-      ],
-    ],
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis reiciendis nesciunt impedit quae, nam nulla. Voluptate, ad! Fugit nihil inventore architecto possimus ratione? Optio est ea voluptates adipisci maiores, earum sunt quod impedit eos repudiandae in a nostrum fugiat eligendi. Voluptas dolore iste, earum possimus facere quod nihil corrupti?",
   },
   {
     title: "Users Requiring Help",
-    body: [
-      [
-        "Geroge Heart (Meeka Heart's Father) need Assistance"
-      ],
-      [
-        "Marcus require paper work"
-      ],
-    ],
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis reiciendis nesciunt impedit quae, nam nulla. Voluptate, ad! Fugit nihil inventore architecto possimus ratione? Optio est ea voluptates adipisci maiores, earum sunt quod impedit eos repudiandae in a nostrum fugiat eligendi. Voluptas dolore iste, earum possimus facere quod nihil corrupti?",
   },
 ];
+
 
 export default sectorExamples;
