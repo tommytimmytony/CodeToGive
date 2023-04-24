@@ -31,6 +31,8 @@ const Sector = ({title, body, cardTitle, className}) => {
             {body}
           </h3>
         </div>
+      ) : (
+        <h3 className="sector-body" style={{wordSpacing: "0.20em", margin: "10px"}}>{body}</h3>
       )}
     </div>
   );
