@@ -119,7 +119,7 @@ const ChildInfoForm = () => {
                             document.getElementById(formPages[currentPageNumber]).style.display = "none";
                             currentPageNumber--;
                             document.getElementById(formPages[currentPageNumber]).style.display = "inline";
-                            //document.getElementById("next").style.cursor = "pointer";
+                            document.getElementById("next").style.cursor = "pointer";
                             if(currentPageNumber == 0){
                                 document.getElementById("prev").disabled = true;
                                 document.getElementById("prev").style.cursor = "not-allowed";
